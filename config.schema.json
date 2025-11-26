@@ -28,6 +28,12 @@
             "required": true,
             "description": "Projector Accessory name"
           },
+          "ip": {
+            "title": "IP",
+            "type": "string",
+            "description": "IP address, will skip discovery if set",
+            "required": false
+          },
           "tuyaId": {
             "title": "Tuya ID",
             "type": "string",
@@ -40,11 +46,11 @@
             "description": "Tuya Key / API Secret",
             "required": true
           },
-          "ip": {
-            "title": "IP",
+	  "tuyaVersion": {
+            "title": "Tuya API Version",
             "type": "string",
-            "description": "Device IP",
-            "required": false
+            "description": "Tuya API Version (some newer models require 3.5)",
+	    "placeholder": "3.3"
           },
 	  "tuyaVersion": {
             "title": "Tuya API Version",
@@ -244,9 +250,13 @@
           "buttonText": "Add Projector",
           "items": [
             "projectors[].name",
+            "projectors[].ip",
             "projectors[].tuyaId",
             "projectors[].tuyaKey",
+<<<<<<< HEAD
 	    "projectors[].ip",
+=======
+>>>>>>> cb97495 (fix manual IP setting not being app[lied, better logging on connect with (discovered) IP address)
             "projectors[].tuyaVersion",
             {
               "key": "projectors[]",

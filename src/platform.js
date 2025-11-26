@@ -62,11 +62,11 @@ function StarProjector(log, config, api) {
         } else {
           try {
             const tuya = new TuyAPI({
+              ip: device.ip,
               id: device.tuyaId,
               key: device.tuyaKey,
               version: device.tuyaVersion ? parseFloat(device.tuyaVersion) : 3.3
             });
-
             this.projectors.set(device.name, tuya);
 
             device.type = 'light';

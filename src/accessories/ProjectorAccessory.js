@@ -192,7 +192,7 @@ class ProjectorAccessory {
       await this.tuya.find();
       await this.tuya.connect();
 
-      Logger.info('Connected to Tuya API', this.accessory.displayName);
+      Logger.info(`Connected to ${this.tuya.device.ip}`, this.accessory.displayName);
 
       this.setAccessoryReachability(true);
       this.getServices();
