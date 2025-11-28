@@ -9,7 +9,7 @@ const TuyAPI = require('tuyapi');
 const ProjectorAccessory = require('./accessories/ProjectorAccessory');
 const SceneAccessory = require('./accessories/SceneAccessory');
 
-const PLUGIN_NAME = 'homebridge-star-projector';
+const PLUGIN_NAME = 'homebridge-blisslights';
 const PLATFORM_NAME = 'StarProjector';
 
 var Accessory, UUIDGen;

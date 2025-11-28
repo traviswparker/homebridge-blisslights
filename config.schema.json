@@ -52,12 +52,6 @@
             "description": "Tuya API Version (some newer models require 3.5)",
 	    "placeholder": "3.3"
           },
-	  "tuyaVersion": {
-            "title": "Tuya API Version",
-            "type": "string",
-            "description": "Tuya API Version (some newer models require 3.5)",
-	    "placeholder": "3.3"
-          },
           "manufacturer": {
             "name": "Manufacturer",
             "type": "string",
@@ -253,10 +247,6 @@
             "projectors[].ip",
             "projectors[].tuyaId",
             "projectors[].tuyaKey",
-<<<<<<< HEAD
-	    "projectors[].ip",
-=======
->>>>>>> cb97495 (fix manual IP setting not being app[lied, better logging on connect with (discovered) IP address)
             "projectors[].tuyaVersion",
             {
               "key": "projectors[]",

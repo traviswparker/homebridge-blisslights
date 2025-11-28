@@ -39,9 +39,6 @@ class ProjectorAccessory {
         this.fanService = this.accessory.addService(this.api.hap.Service.Fanv2, 'Rotation', 'rotation');
         this.fanService.addCharacteristic(this.api.hap.Characteristic.RotationSpeed);
       }
-      this.fanService.getCharacteristic(this.api.hap.Characteristic.RotationSpeed).setProps({
-        minValue: 1,
-      });
     } else {
       if (this.fanService) {
         this.accessory.removeService(this.fanService);
@@ -303,7 +300,6 @@ class ProjectorAccessory {
     if (this.fanService) {
       Logger.debug(`Incoming rotation event: ${value}`);
 
-      value = value / 10;
       this.fanService.getCharacteristic(this.api.hap.Characteristic.Active).updateValue(value > 1 ? 1 : 0);
       this.fanService.getCharacteristic(this.api.hap.Characteristic.RotationSpeed).updateValue(value);
     }
@@ -399,7 +395,7 @@ class ProjectorAccessory {
         }
 
         this.rotationStateTimeout = setTimeout(async () => {
-          await this.setRotationSpeed(state ? 100 : 1, true);
+          await this.setRotationSpeed(state, true);
         }, 500);
       }
     } catch (err) {
@@ -414,7 +410,7 @@ class ProjectorAccessory {
     try {
       await this.tuya.set({
         dps: this.dps.rotation,
-        set: value * 10,
+        set: value 
       });
 
       Logger.info(`Rotation Speed: ${value}`, this.accessory.displayName);

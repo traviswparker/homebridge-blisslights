@@ -1,6 +1,6 @@
 'use strict';
 
-const Logger = require('homebridge-star-projector/src/helper/logger');
+const Logger = require('../helper/logger');
 const ColorUtils = require('../helper/utils');
 
 class SceneAccessory {

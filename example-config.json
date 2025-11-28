@@ -8,7 +8,7 @@
   "platforms": [
     {
       "name": "StarProjector",
-      "debug": true,
+      "debug": false,
       "projectors": [
           {
               "name": "Star Projector Livingroom",
@@ -28,8 +28,8 @@
             "starRotation": true,
             "dps": {
                         "powerState": 20,
-                        "laserState": 52,
-                        "colorState": 53,
+                        "laserState": 53,
+                        "colorState": 52,
                         "laserBrightness": 54,
                         "color": 24,
                         "rotation": 62,
